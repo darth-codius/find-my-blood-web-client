@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import Signin from './Components/Pages/Signin';
+import Signup from './Components/Pages/Signup';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
      
      <Signin />
+     <Signup />
     </div>
   );
 }

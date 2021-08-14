@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+.heading {
+  margin-bottom: 20px;
 }
 
 .Signin-form {
@@ -7,10 +7,48 @@
   pointer-events: none;
 }
 
-
-
-.Signin-button {
-  background-color: red
+.button1 {
+  background-color: red !important;
+}
+.button1 {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 200px;
+  height: 64px;
+  border-radius: 32px;
+  padding: 10px;
+  text-decoration-color: white;
 }
 
-
+.container {
+  width: 800px;
+  padding: 100px 20px;
+}
+.p2 {
+  margin-left: 213px;
+}
+.col-g-3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.col-md-6 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.signup {
+  color: rgb(0, 195, 255);
+  margin-left: 20px;
+}
+.pimg{
+  margin-left: 190px;
+  margin-top: -50px;
+  font-size: smaller;
+}
+.getblood{
+  margin-left: 100px;
+  min-width: -100px;
+}
+.image{
+  border-right: black 1px solid;
+  
+}
