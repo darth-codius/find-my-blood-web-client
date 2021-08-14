@@ -10,7 +10,19 @@
 .button1 {
   background-color: red !important;
 }
+.button2 { 
+  background-color: red !important;
+}
 .button1 {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 200px;
+  height: 64px;
+  border-radius: 32px;
+  padding: 10px;
+  text-decoration-color: white;
+}
+.button2 {
   margin-bottom: 30px;
   margin-top: 40px;
   width: 200px;
@@ -24,12 +36,19 @@
   width: 800px;
   padding: 100px 20px;
 }
+
 .p2 {
   margin-left: 213px;
+}
+.pdonor {
+   margin-left: 270px;
 }
 .col-g-3 {
   margin-top: 50px;
   margin-bottom: 20px;
+}
+.col-h-4{
+  margin-top: -0px;
 }
 .col-md-6 {
   margin-top: 10px;
@@ -39,6 +58,10 @@
   color: rgb(0, 195, 255);
   margin-left: 20px;
 }
+.signin1 {
+  color: rgb(0, 195, 255);
+  margin-left: 10px;
+}
 .pimg{
   margin-left: 190px;
   margin-top: -50px;
@@ -47,8 +70,9 @@
 .getblood{
   margin-left: 100px;
   min-width: -100px;
-}
-.image{
-  border-right: black 1px solid;
   
+}
+.getblood1{
+  margin-left: 100px;
+  min-width: -150px;
 }
