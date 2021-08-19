@@ -76,3 +76,37 @@
   margin-left: 100px;
   min-width: -150px;
 }
+.col-md-5 {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.make{
+  color: white;
+  background-color: #ed394A;
+  margin-top: 20px;
+  border-radius: 32px;
+  margin-left: 90px;
+  width: 276px;
+  height: 64px;
+  left: 121px;
+  top: 520px;
+}
+.save {
+  font-size: 101px;
+  font-weight: 700px;
+  line-height: 108px;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-left: 90px;
+}
+.col-md-6 {
+  margin-left: 60px;
+}
+.life {
+  margin-left: 90px;
+  font-size: 20px;
+}
+.col-md-6 {
+  margin-top: 40px;
+}
