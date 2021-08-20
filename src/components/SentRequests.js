@@ -1,12 +1,12 @@
 import React from "react";
 
-function NavBar() {
+function SentRequests() {
   return (
-    
+    <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="..">
-          <img src="../../../img/Vector.svg" alt="" className="navimg" />
-          <h6>GET BLOOD</h6>
+          <img src="../../../img/blood 1.png" alt="" />
+          <h6 className="getblood">GET BLOOD</h6>
         </a>
         <button
           className="navbar-toggler"
@@ -23,20 +23,15 @@ function NavBar() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <button type="button" className="navbutton">
-                Login
-              </button>
-            </li>
-            <li class="nav-item">
               <button type="button" className="navbutton1">
-                Register
+                Make a Request
               </button>
             </li>
           </ul>
         </div>
       </nav>
-    
+    </div>
   );
 }
 
-export default NavBar;
+export default SentRequests;
