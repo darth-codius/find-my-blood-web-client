@@ -2,7 +2,23 @@ import React from "react";
 
 export default function Request() {
   return (
-    <>
+      <>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+     <a class="navbar-brand" href="#">Navbar</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+     </button>
+     
+     
+      
+      <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      
+      </div>
+      </nav>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-5">
@@ -20,22 +36,7 @@ export default function Request() {
         </div>
       </div>
 
-      {/* <div className="getblood1">
-        <img src="../../../img/blood1.png" alt="" />
-        <button className="make">Make a Request</button>
-      </div>
-      <div className="section">
-        <div>
-          <h1>Get Blood, Save Lives</h1>
-          <p>
-            There's blood beneath every layer of skin, the blood is the life!
-          </p>
-          <button className="make1">Make a Request</button>
-          <div>
-            <img src="../../../img/bloodgroup(1).svg" alt="" />
-          </div>
-        </div>
-      </div> */}
-    </>
+      
+     </>
   );
 }
