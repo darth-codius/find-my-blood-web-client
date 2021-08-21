@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import RequestPage from "./components/RequestPage";
 import SentRequests from "./components/SentRequests";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       {/* <NavBar /> */}
       {/* <Footer/> */}
       {/* <RequestPage/> */}
-      <SentRequests/>
+      {/* <SentRequests/> */}
+      <Profile/>
+
     </div>
   );
 }
