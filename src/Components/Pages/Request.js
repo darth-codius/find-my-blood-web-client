@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Request() {
   return (
-    <>
+    <div className="container4">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -21,6 +21,9 @@ export default function Request() {
           </button>
 
           <form class="d-flex">
+            <div className="profile">
+            <img src="../../../img/Profile.svg" alt="" />
+            </div>
             <button class="btn btn-outline-success" type="submit">
               Make a Request
             </button>
@@ -96,6 +99,6 @@ export default function Request() {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 }

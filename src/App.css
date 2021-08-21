@@ -110,3 +110,22 @@
   margin-top: 40px;
 }
 
+.container4{
+  padding-left: 120px;
+  padding-right: 120px;
+}
+.table{
+  margin-bottom: 120px;
+}
+.btn-outline-success{
+  background-color: red;
+  width: 232px;
+  height: 64px;
+  text-decoration-color: white;
+  padding: 10px;
+  border-radius: 26px;
+}
+.profile{
+  margin-right: 70px;
+  margin-bottom: 20px;
+}
