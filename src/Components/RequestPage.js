@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function RequestPage() {
   return (
     <div>
@@ -23,9 +24,7 @@ function RequestPage() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <button type="button" className="navbutton1">
-                Register
-              </button>
+              <img src="../../../img/Profile.svg" alt="" />
             </li>
           </ul>
         </div>

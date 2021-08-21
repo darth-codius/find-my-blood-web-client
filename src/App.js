@@ -1,9 +1,9 @@
 import "./App.css";
 import Home from "./Components/Home";
-import NavBar from "./components/NavBar";
+import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
-import RequestPage from "./components/RequestPage";
-import SentRequests from "./components/SentRequests";
+import RequestPage from "./Components/RequestPage";
+import SentRequests from "./Components/SentRequests";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
