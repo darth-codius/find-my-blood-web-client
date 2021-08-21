@@ -1,38 +1,180 @@
-.App {
+.getblood {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14.91px;
+  line-height: 22.37px;
+  margin-top: 5px;
+  margin-left: -12px;
+}
+
+.navblood {
+  padding: 5px 60px;
+  height: 120px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.navbutton {
+  color: #ed394a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  border: none;
+  background-color: transparent;
+  padding: 20px 30px 10px 30px;
+  margin: 0 80px;
+}
+.navbutton1 {
+  background-color: #ed394a;
+  width: 230px;
+  height: 50px;
+  border-radius: 32px;
+  border: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.card1 {
+  height: 805px;
+  margin-bottom: 150px;
+  padding: 5px 180px;
+}
+.card2 {
+  margin-top: 150px;
+}
+.cardtittle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 108px;
+}
+.cardtext {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+.button3 {
+  width: 276px;
+  height: 64px;
+  border-radius: 32px;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  background: #ed394a;
+  color: white;
+  border: none;
+}
+.container {
+  padding: 50px 60px;
+  margin-top: 60px 60px;
+}
+
+.title1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+.span1 {
+  width: 60.74px;
+  height: 2px;
+  border-radius: 6px;
+  background-color: #ed394a;
+  display: inline-block;
+}
+
+.title2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 40px;
+}
+.button4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ed394a;
+  width: 276.28px;
+  height: 64px;
+  border-radius: 32px;
+  border: 1px solid #ed394a;
+  margin-top: 40px;
+  background-color: #ffffff;
+}
+
+.button5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  line-height: 27px;
+  color: #ed394a;
+  width: 276px;
+  height: 64px;
+  border: 1px solid;
+  border-radius: 32px;
+  box-sizing: border-box;
+  margin-top: 64px;
+  background-color: #ffffff;
+}
+.list {
+  margin-top: 62px;
+  line-height: 4;
+  width: 350px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container-fluid {
+  background-color: #ed394a;
+}
+.footer {
+  background-color: #ed394a;
+  opacity: 0.9;
+  color: white;
+  height: 402px;
+  border-radius: 4px;
+  padding: 5px 60px;
+}
+
+.requesttext {
+  text-align: center;
+  margin-top: 32px;
+  line-height: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ed394a;
+}
+
+.reqbuttondiv {
+  margin-bottom: 32px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.requstbutton {
+  background-color: #ed394a;
   color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 32px;
+  border: none;
 }
-
-.App-link {
-  color: #61dafb;
+.requestrow {
+  height: 80px;
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.requesttable {
+  padding: 0px 50px;
 }
