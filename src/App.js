@@ -1,17 +1,38 @@
-import './App.css';
+import "./App.css";
+import Home from "./Components/Home";
+import NavBar from "./components/NavBar";
+import Footer from "./Components/Footer";
+import RequestPage from "./components/RequestPage";
+import SentRequests from "./components/SentRequests";
+import "./App.css";
 import React from "react";
-import Signin from './Components/Signin';
-import Signup from './Components/Signup';
-import Request from './Components/Request';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Signin from "./Components/Signin";
+import Landing from "./Components/Landing";
+import Signup from "./Components/Success";
+import Request from "./Components/Request";
 
 function App() {
   return (
-    <div className="App">
-     
-     <Signin />
-     {/* <Signup /> */}
-     {/* <Request/> */}
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/landing" exact>
+          <Landing />
+        </Route>
+        <Route path="/login" exact>
+          <Signin />
+        </Route>
+        <Route path="/signup" exact>
+          <Signup />
+        </Route>
+        <Route path="/request" exact>
+          <Request />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
