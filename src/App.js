@@ -9,8 +9,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./Components/Signin";
 import Landing from "./Components/Landing";
-import Signup from "./Components/Pages/Success";
-import Request from "./Components/Pages/Request";
+import Signup from "./Components/Success";
+import Request from "./Components/Request";
 
 function App() {
   return (
