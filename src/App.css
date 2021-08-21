@@ -13,6 +13,34 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   background: #ffffff;
 }
+h1{
+  text-align: center;
+  color:  #323131;;
+  font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+  }
+
+  .btn4{
+    background: #ED394A;
+    border-radius: 32px;
+    width: 250px;
+    height: 50px;
+    left: 582px;
+    background-position: center;
+    color: white;
+    
+  }
+.header{
+  background-color: rgb(184, 179, 163);
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
 .navbutton {
   color: #ed394a;
@@ -37,38 +65,14 @@
   font-size: 18px;
   line-height: 27px;
 }
-
-.card1 {
-  height: 805px;
-  margin-bottom: 150px;
-  padding: 5px 180px;
-}
-.card2 {
-  margin-top: 150px;
-}
-.cardtittle {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 108px;
-}
-.cardtext {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 20px;
-}
-.button3 {
-  width: 276px;
-  height: 64px;
-  border-radius: 32px;
-  margin-top: 50px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
-  background: #ed394a;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
   border: none;
 }
