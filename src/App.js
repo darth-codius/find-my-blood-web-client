@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Signin from './Components/Signin';
 import Landing from './Components/Landing'
-import Signup from './Components/Pages/Success';
+import Signup from './Components/Pages/Errorpage';
 import Request from './Components/Pages/Request';
 
 function App() {

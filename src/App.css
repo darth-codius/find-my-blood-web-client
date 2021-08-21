@@ -4,8 +4,12 @@
 
 h1{
   text-align: center;
-  color: solid black;
-}
+  color:  #323131;;
+  font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+  }
 
   .btn4{
     background: #ED394A;
@@ -14,9 +18,9 @@ h1{
     height: 50px;
     left: 582px;
     background-position: center;
-    color: white
+    color: white;
+    
   }
-  
 .header{
   background-color: rgb(184, 179, 163);
 }
