@@ -1,5 +1,9 @@
 .heading {
+  margin-top: 122px;
   margin-bottom: 20px;
+}
+.back {
+  margin-bottom: 60px;
 }
 
 .Signin-form {
@@ -53,6 +57,7 @@
 .col-md-6 {
   margin-top: 10px;
   margin-bottom: 30px;
+  margin-right: 50px;
 }
 .signup {
   color: rgb(0, 195, 255);
@@ -63,13 +68,19 @@
   margin-left: 10px;
 }
 .pimg {
-  margin-left: 190px;
+  text-align: center;
+  margin-top: -120px;
+  /* margin-left: 190px;
   margin-top: -50px;
-  font-size: smaller;
+  font-size: smaller; */
 }
 .getblood {
   margin-left: 100px;
   min-width: -100px;
+  margin-bottom: 20px;
+}
+.col {
+  margin-bottom: 0px;
 }
 .getblood1 {
   margin-left: 100px;
@@ -99,9 +110,7 @@
   margin-top: 60px;
   margin-left: 90px;
 }
-.col-md-6 {
-  margin-left: 60px;
-}
+
 .life {
   margin-left: 90px;
   font-size: 20px;
@@ -110,14 +119,14 @@
   margin-top: 40px;
 }
 
-.container4{
+.container4 {
   padding-left: 120px;
   padding-right: 120px;
 }
-.table{
+.table {
   margin-bottom: 120px;
 }
-.btn-outline-success{
+.btn-outline-success {
   background-color: red;
   width: 232px;
   height: 64px;
@@ -125,7 +134,7 @@
   padding: 10px;
   border-radius: 26px;
 }
-.profile{
+.profile {
   margin-right: 70px;
   margin-bottom: 20px;
 }
