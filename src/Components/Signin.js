@@ -1,26 +1,25 @@
 import React from "react";
-
+import "./Signin.css";
 export default function Signin() {
   return (
     <div className="container-fluid">
       <div className="getblood">
         <img src="../../../img/getblood.jpeg" alt="" />
       </div>
-      <div class="row">
+      <div class="row signin-row">
         <div class="col">
-        <div className="image">
+          <div className="image">
             <img src="../../../img/Blood donation-rafiki.svg" alt="" />
             <p className="pimg">
-              One print of blood can save up to 
-              three lives
+              One print of blood can save up to three lives
             </p>
-        </div>
+          </div>
         </div>
         <div class="col">
           <div className="heading">
             <h1>LOGIN</h1>
           </div>
-          <p>Welcome Back</p>
+          <p className="back">Welcome Back</p>
 
           <form class="col-g-3">
             <div class="col-md-6">

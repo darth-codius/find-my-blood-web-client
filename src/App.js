@@ -1,16 +1,16 @@
 import './App.css';
 import React from "react";
-import Signin from './Components/Pages/Signin';
-import Signup from './Components/Pages/Signup';
-import Request from './Components/Pages/Request';
+import Signin from './Components/Signin';
+import Signup from './Components/Signup';
+import Request from './Components/Request';
 
 function App() {
   return (
     <div className="App">
      
-     {/* <Signin /> */}
+     <Signin />
      {/* <Signup /> */}
-     <Request/>
+     {/* <Request/> */}
     </div>
   );
 }
