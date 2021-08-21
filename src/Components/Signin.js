@@ -5,9 +5,10 @@ export default function Signin() {
         <div  className="login">
             <div>
             <h1> GET BLOOD</h1>
-            {/* <img src */}
+        
             <p>One pint of blood can save up to three lives</p>
             </div>
+            <h1>hello</h1>
             <div>
                 <form>
                 <h1>Login</h1>

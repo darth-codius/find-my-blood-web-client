@@ -2,6 +2,26 @@
   text-align: center;
 }
 
+h1{
+  text-align: center;
+  color: solid black;
+}
+
+  .btn4{
+    background: #ED394A;
+    border-radius: 32px;
+    width: 250px;
+    height: 50px;
+    left: 582px;
+    background-position: center;
+    color: white
+  }
+  
+.header{
+  background-color: rgb(184, 179, 163);
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +32,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
