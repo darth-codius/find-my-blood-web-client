@@ -9,7 +9,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./Components/Signin";
 import Landing from "./Components/Landing";
-import Signup from "./Components/Success";
+import Signup from "./Components/Signup";
 import Request from "./Components/Request";
 
 function App() {
