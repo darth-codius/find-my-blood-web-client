@@ -1,5 +1,5 @@
 import "./App.css";
-import Home from "./Components/Home";
+import Home from "./Components/home/Home";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import RequestPage from "./Components/RequestPage";
@@ -9,7 +9,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./Components/Signin";
 import Landing from "./Components/Landing";
-import Signup from "./Components/Signup";
+import Signup from "./Components/signup/Signup";
 import Request from "./Components/Request";
 
 function App() {

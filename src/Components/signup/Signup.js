@@ -1,12 +1,13 @@
 import React from "react";
+import './Signup.css'
 
 export default function Signup() {
   return (
     <div className="row flex-fill">
-      <div className="container ">
+      <div className="row-container ">
         <img src="../../../img/logo.svg" alt="" />
       </div>
-      <div className="container row">
+      <div className="row-container flex-fill">
         <div class="col-5">
           <div className="image">
             <img src="../../../img/Blooddonation.svg" alt="" />
@@ -43,7 +44,7 @@ export default function Signup() {
                 type="text"
                 class="form-control"
                 id="inputPassword"
-              ></input>
+              />
             </div>
             <div class="col-md-6">
               <label for="inputPassword" class="form-label">
@@ -53,7 +54,7 @@ export default function Signup() {
                 type="text"
                 class="form-control"
                 id="inputPassword"
-              ></input>
+              />
             </div>
           </form>
 
