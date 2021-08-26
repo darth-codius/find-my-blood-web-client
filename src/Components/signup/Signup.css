@@ -1,0 +1,23 @@
+.heading {
+  margin-top: 122px;
+  margin-bottom: 20px;
+}
+.button2 {
+  background-color: red !important;
+}
+.button2 {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 200px;
+  height: 64px;
+  border-radius: 32px;
+  padding: 10px;
+  text-decoration-color: white;
+}
+.signin1 {
+  color: rgb(0, 195, 255);
+  margin-left: 10px;
+}
+.pdonor {
+  margin-left: 270px;
+}
