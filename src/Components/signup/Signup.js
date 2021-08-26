@@ -1,10 +1,20 @@
-import React from "react";
-import './Signup.css'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Signup.css";
 
-export default function Signup() {
+export default function Signup(props) {
+  const [hospitalName, setHospitalName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSignup = () => {
+    
+  };
+
   return (
     <div className="row flex-fill">
-      <div className="row-container ">
+      <div className="row-container">
         <img src="../../../img/logo.svg" alt="" />
       </div>
       <div className="row-container flex-fill">
@@ -27,13 +37,27 @@ export default function Signup() {
               <label for="inputEmail4" class="form-label">
                 Hospital Name
               </label>
-              <input type="name" class="form-control" id="inputName4"></input>
+              <input
+                type="text"
+                class="form-control"
+                id="inputName4"
+                value={hospitalName}
+                onChange={(e) => setHospitalName(e.target.value)}
+                required
+              ></input>
             </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">
                 Email Address
               </label>
-              <input type="email" class="form-control" id="inputEmail4"></input>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              ></input>
             </div>
 
             <div class="col-md-6">
@@ -41,9 +65,12 @@ export default function Signup() {
                 Password
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="inputPassword"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
             <div class="col-md-6">
@@ -54,13 +81,19 @@ export default function Signup() {
                 type="text"
                 class="form-control"
                 id="inputPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
               />
             </div>
           </form>
 
           <button className="button2">Register</button>
           <p>
-            Already have an account?<span className="signin1">Login</span>
+            Already have an account?
+            <Link to="/login" className="signin1">
+              Login
+            </Link>
           </p>
         </div>
       </div>

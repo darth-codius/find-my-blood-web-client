@@ -123,3 +123,18 @@
     font-weight: 400;
     font-size: 16px;
   }
+.getblood {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14.91px;
+  line-height: 22.37px;
+  margin-top: 5px;
+  margin-left: -12px;
+}
+
+.navblood {
+  padding: 5px 90px;
+  height: 120px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}

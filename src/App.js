@@ -1,11 +1,12 @@
+
 import "./App.css";
 import Home from "./Components/home/Home";
-import NavBar from "./Components/NavBar";
+
 import Footer from "./Components/Footer";
 import RequestPage from "./Components/RequestPage";
 import SentRequests from "./Components/SentRequests";
 import "./App.css";
-import React from "react";
+import React, { useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./Components/Signin";
 import Landing from "./Components/Landing";
@@ -13,6 +14,14 @@ import Signup from "./Components/signup/Signup";
 import Request from "./Components/Request";
 
 function App() {
+
+
+
+  //  const handleSignUp = {
+  //     const submitData = { input, }
+ 
+  //   }
+
   return (
     <Router>
       <Switch>
