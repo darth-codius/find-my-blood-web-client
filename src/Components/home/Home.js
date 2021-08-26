@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../Footer'
+// import Footer from '../Footer'
 
 import './Home.css'
 
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
+      
     </div>
   );
 }

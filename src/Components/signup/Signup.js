@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Signup.css";
+import axios from "axios";
 
 export default function Signup(props) {
-  const [hospitalName, setHospitalName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSignup = () => {
-    
+  const handleSignup = async () => {
+    try {
+      let res = await axios.post(
+        "https://find-my-blood.herokuapp.com/hospital/signup",
+        {
+          name,
+          email,
+          password,
+          confirmPassword,
+        }
+      );
+      console.log(res);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -32,7 +46,7 @@ export default function Signup(props) {
           </div>
           <p>Create an account</p>
 
-          <form class="col-g-4">
+          <form class="col-g-4" onSubmit={handleSignup}>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">
                 Hospital Name
@@ -41,8 +55,8 @@ export default function Signup(props) {
                 type="text"
                 class="form-control"
                 id="inputName4"
-                value={hospitalName}
-                onChange={(e) => setHospitalName(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               ></input>
             </div>
@@ -78,7 +92,7 @@ export default function Signup(props) {
                 Confirm Password
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="inputPassword"
                 value={confirmPassword}
@@ -88,7 +102,9 @@ export default function Signup(props) {
             </div>
           </form>
 
-          <button className="button2">Register</button>
+          <button className="button2" type="submit" onClick={handleSignup}>
+            Register
+          </button>
           <p>
             Already have an account?
             <Link to="/login" className="signin1">

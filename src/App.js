@@ -41,6 +41,7 @@ function App() {
           <Request />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
