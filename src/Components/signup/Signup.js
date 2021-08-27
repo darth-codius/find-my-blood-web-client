@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Signup.css";
 import axios from "axios";
 
-export default function Signup(props) {
+export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,9 +20,12 @@ export default function Signup(props) {
           confirmPassword,
         }
       );
-      console.log(res);
+      alert("Registration successful");
+    
+      
     } catch (error) {
       console.error(error);
+      alert ('Registration Failed. Try Again');
     }
   };
 

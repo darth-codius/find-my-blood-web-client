@@ -1,48 +1,32 @@
-
-import "./App.css";
-import Home from "./Components/home/Home";
-
-import Footer from "./Components/Footer";
-import RequestPage from "./Components/RequestPage";
-import SentRequests from "./Components/SentRequests";
-import "./App.css";
-import React, { useState} from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Signin from "./Components/Signin";
-import Landing from "./Components/Landing";
-import Signup from "./Components/signup/Signup";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Request from "./Components/Request";
+import Signin from "./Components/Signin";
+import Signup from "./Components/signup/Signup";
+import Home from "./Components/home/Home";
+import "./App.css";
 
 function App() {
-
-
-
-  //  const handleSignUp = {
-  //     const submitData = { input, }
- 
-  //   }
+  const [user, setUser] = useState("");
 
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/landing" exact>
-          <Landing />
-        </Route>
-        <Route path="/login" exact>
-          <Signin />
-        </Route>
-        <Route path="/signup" exact>
-          <Signup />
-        </Route>
-        <Route path="/request" exact>
-          <Request />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <div>
+      {user ? (
+        <Request />
+      ) : (
+        <Switch>
+          <Route exact path="/login" user={user} setUser={setUser}>
+            <Signin />
+          </Route>
+          <Route path="/signup" exact user={user} setUser={setUser}>
+            <Signup />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
+      )}
+    </div>
   );
 }
 
