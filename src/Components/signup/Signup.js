@@ -25,7 +25,7 @@ export default function Signup() {
       
     } catch (error) {
       console.error(error);
-      alert ('Registration Failed. Try Again');
+      alert ('Registration Failed, Email already exists, Try Again');
     }
   };
 

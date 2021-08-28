@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
-export default function Signin({ user, setUser }) {
+
+export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState("");
+
+  let history = useHistory();
 
   const handleSignin = async (e) => {
     e.preventDefault();
@@ -17,8 +22,16 @@ export default function Signin({ user, setUser }) {
           password,
         }
       );
-      console.log(res);
+      let user = res.data.data
+      let token = res.data.token
+      console.log(res.data);
+      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('token', JSON.stringify(token))
       setUser(user);
+
+
+      history.push("/Request")
+
     } catch (error) {
       console.error(error);
     }

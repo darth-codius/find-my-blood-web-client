@@ -1,33 +1,59 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Request() {
+  const [request, setRequest] = useState({});
+
+  const token = JSON.parse(localStorage.getItem('token'))
+  const user = JSON.parse(localStorage.getItem('user'))
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `${token}`
+  }
+  useEffect(() => {
+
+    async function getData() {
+      try {
+        const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/request/all",
+          { hospital: user.name }, { headers })
+        console.log(response);
+        // setRequest(data)
+
+      } catch (error) {
+
+      }
+    };
+
+    getData()
+  }, [])
   return (
     <div className="container4">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="../../../img/getblood.jpeg" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
+        <a className="navbar-brand" href="..">
+          <img src="../../../img/blood 1.svg" alt="" />
+          <h6 className="getblood">GET BLOOD</h6>
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <form class="d-flex">
-            <div className="profile">
-            <img src="../../../img/Profile.svg" alt="" />
-            </div>
-            <button class="btn btn-outline-success" type="submit">
-              Make a Request
-            </button>
-          </form>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <img src="../../../img/Profile.svg" alt="" />
+            </li>
+          </ul>
         </div>
       </nav>
       <div className="container-fluid">
@@ -38,7 +64,9 @@ export default function Request() {
               There's blood beneath every layer of skin, <br></br>the blood is
               the life!
             </p>
-            <button className="make">Make a Request</button>
+            <Link to="/requestpage">
+              <button className="make">Make a Request</button>
+            </Link>
           </div>
           <div className="col-md-6">
             <img src="../../../img/bloodgroup(1).svg" alt="" />
@@ -56,18 +84,7 @@ export default function Request() {
               </tr>
             </thead>
             <tbody>
-              <tr class="table-danger">
-                <th scope="row"></th>
-                <td>-----------</td>
-                <td>-----------</td>
-                <td>-----------</td>
-              </tr>
-              <tr class="table-danger">
-                <th scope="row"></th>
-                <td>-----------</td>
-                <td>-----------</td>
-                <td>-----------</td>
-              </tr>
+              { }//todo
             </tbody>
           </table>
         </div>
