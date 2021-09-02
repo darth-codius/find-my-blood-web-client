@@ -8,7 +8,6 @@ import "./SignIn.css";
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState("");
 
   let history = useHistory();
 
@@ -28,8 +27,6 @@ export default function Signin() {
       console.log(res.data);
       localStorage.setItem('user', JSON.stringify(user))
       localStorage.setItem('token', JSON.stringify(token))
-      setUser(user);
-
 
       history.push("/dashboard")
 

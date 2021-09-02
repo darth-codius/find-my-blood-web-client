@@ -11,6 +11,7 @@ export default function Signup() {
 
   const handleSignup = async () => {
     try {
+      // eslint-disable-next-line
       let res = await axios.post(
         "https://find-my-blood.herokuapp.com/hospital/signup",
         {
@@ -20,9 +21,7 @@ export default function Signup() {
           confirmPassword,
         }
       );
-      console.log(res)
-      alert("Registration successful");
-
+      if(res.status === 200) window.location.href = '/login'
 
     } catch (error) {
       console.error(error);

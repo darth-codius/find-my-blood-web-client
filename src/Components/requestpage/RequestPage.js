@@ -41,6 +41,7 @@ function RequestPage() {
   const [banks, setBanks] = useState([])
 
   const token = JSON.parse(localStorage.getItem('token'))
+  // eslint-disable-next-line
   const user = JSON.parse(localStorage.getItem('user'))
 
   const headers = {
