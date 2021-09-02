@@ -7,7 +7,32 @@
   margin-left: -12px;
 }
 
-h1 {
+.navblood {
+  padding: 5px 90px;
+  height: 120px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.btn4 {
+  background: #ed394a;
+  border-radius: 32px;
+  width: 250px;
+  height: 50px;
+  left: 582px;
+  background-position: center;
+  color: white;
+}
+
+.header {
+  background-color: rgb(184, 179, 163);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.errortext {
   text-align: center;
   color: #323131;
   font-family: Poppins;
@@ -34,29 +59,7 @@ h1 {
   pointer-events: none;
 }
 
-.navbutton {
-  color: #ed394a;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
 
-  border: none;
-  background-color: transparent;
-  padding: 20px 30px 10px 30px;
-  margin: 0 80px;
-}
-.navbutton1 {
-  background-color: #ed394a;
-  width: 230px;
-  height: 50px;
-  border-radius: 32px;
-  border: none;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
-}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -68,112 +71,27 @@ h1 {
   color: white;
   border: none;
 }
-.container {
-  padding: 50px 60px;
-  margin-top: 60px 60px;
-}
 
-.title1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-}
-.span1 {
-  width: 60.74px;
-  height: 2px;
-  border-radius: 6px;
-  background-color: #ed394a;
-  display: inline-block;
-}
 
-.title2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 40px;
-}
-.button4 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
-  color: #ed394a;
-  width: 276.28px;
-  height: 64px;
-  border-radius: 32px;
-  border: 1px solid #ed394a;
-  margin-top: 40px;
-  background-color: #ffffff;
-}
 
-.button5 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  line-height: 27px;
-  color: #ed394a;
-  width: 276px;
-  height: 64px;
-  border: 1px solid;
-  border-radius: 32px;
-  box-sizing: border-box;
-  margin-top: 64px;
-  background-color: #ffffff;
-}
-.list {
-  margin-top: 62px;
-  line-height: 4;
-  width: 350px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.container-fluid {
-  background-color: #ed394a;
-}
-.footer {
-  background-color: #ed394a;
-  opacity: 0.9;
-  color: white;
-  height: 402px;
-  border-radius: 4px;
-  padding: 5px 60px;
-}
-
-.requesttext {
-  text-align: center;
-  margin-top: 32px;
-  line-height: 36px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #ed394a;
-}
 
 .reqbuttondiv {
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-.requstbutton {
-  background-color: #ed394a;
-  color: white;
-  width: 200px;
-  height: 40px;
-  border-radius: 32px;
-  border: none;
-}
+  margin-top: 30px;
+margin-bottom: 32px;
+text-align: center;
+} 
 .requestrow {
   height: 80px;
   text-align: center;
 }
-.requesttable {
-  padding: 0px 50px;
-}
+
+
+
+
+
+
+
+
 .button1 {
   background-color: red !important;
 }
@@ -199,10 +117,7 @@ h1 {
   text-decoration-color: white;
 }
 
-.container {
-  width: 800px;
-  padding: 100px 20px;
-}
+
 
 .p2 {
   margin-left: 213px;
@@ -217,10 +132,7 @@ h1 {
 .col-h-4 {
   margin-top: -0px;
 }
-.col-md-6 {
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
+
 .signup {
   color: rgb(0, 195, 255);
   margin-left: 20px;
@@ -242,48 +154,10 @@ h1 {
   margin-left: 100px;
   min-width: -150px;
 }
-.col-md-5 {
-  margin-top: 50px;
-  margin-left: 20px;
-}
-.make {
-  color: white;
-  background-color: #ed394a;
-  margin-top: 20px;
-  border-radius: 32px;
-  margin-left: 90px;
-  width: 276px;
-  height: 64px;
-  left: 121px;
-  top: 520px;
-}
-.save {
-  font-size: 101px;
-  font-weight: 700px;
-  line-height: 108px;
-  font-family: sans-serif;
-  margin-bottom: 30px;
-  margin-top: 60px;
-  margin-left: 90px;
-}
-.col-md-6 {
-  margin-left: 60px;
-}
-.life {
-  margin-left: 90px;
-  font-size: 20px;
-}
-.col-md-6 {
-  margin-top: 40px;
-}
 
-.container4 {
-  padding-left: 120px;
-  padding-right: 120px;
-}
-.table {
-  margin-bottom: 120px;
-}
+
+
+
 .btn-outline-success {
   background-color: red;
   width: 232px;
@@ -295,4 +169,22 @@ h1 {
 .profile {
   margin-right: 70px;
   margin-bottom: 20px;
+}
+
+.flex-fill{
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.requestpageP {
+  text-align: right;
 }

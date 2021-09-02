@@ -1,0 +1,140 @@
+.navbutton {
+  color: #ed394a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  border: none;
+  background-color: transparent;
+  padding: 20px 30px 10px 30px;
+  margin: 0 80px;
+}
+.navbutton1 {
+  background-color: #ed394a;
+  width: 230px;
+  height: 50px;
+  border-radius: 32px;
+  border: none;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+.nav-item {
+  list-style: none;
+}
+.card1 {
+  height: 805px;
+  margin-bottom: 150px;
+  padding: 5px 180px;
+}
+.card2 {
+  margin-top: 150px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cardtittle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 108px;
+  text-align: start;
+}
+.cardtext {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+.button3 {
+  width: 276px;
+  height: 64px;
+  border-radius: 32px;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  background: #ed394a;
+  color: white;
+  border: none;
+}
+
+.button3:hover {
+  color: #ed394a;
+  background-color: white;
+  border: 1px solid #ed394a;
+  border-radius: 50px;
+}
+
+.title1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+.span1 {
+  width: 60.74px;
+  height: 2px;
+  border-radius: 6px;
+  background-color: #ed394a;
+  display: inline-block;
+}
+
+.title2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 40px;
+}
+.button4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ed394a;
+  width: 276.28px;
+  height: 64px;
+  border-radius: 32px;
+  border: 1px solid #ed394a;
+  margin-top: 40px;
+  background-color: #ffffff;
+}
+
+.button4:hover {
+  background-color: #ed394a;
+  color: white;
+}
+
+.list {
+    margin-top: 62px;
+    line-height: 4;
+    width: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+.getblood {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14.91px;
+  line-height: 22.37px;
+  margin-top: 5px;
+  margin-left: -12px;
+}
+
+.navblood {
+  padding: 5px 90px;
+  height: 120px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}

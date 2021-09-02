@@ -1,38 +1,47 @@
-import "./App.css";
-import Home from "./Components/Home";
-import NavBar from "./components/NavBar";
-import Footer from "./Components/Footer";
-import RequestPage from "./components/RequestPage";
-import SentRequests from "./components/SentRequests";
-import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Signin from "./Components/Signin";
-import Landing from "./Components/Landing";
-import Signup from "./Components/Success";
-import Request from "./Components/Request";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+
+import Dashboard from "./Components/dashboard/Dashboard";
+import Signin from "./Components/signin/Signin";
+import Signup from "./Components/signup/Signup";
+import Home from "./Components/home/Home";
+import Footer from "./Components/footer/Footer";
+import RequestPage from "./Components/requestpage/RequestPage";
+import SentRequests from "./Components/sentrequest/SentRequests";
+import Profile from "./Components/profile/Profile"
+import "./App.css";
 
 function App() {
+
   return (
-    <Router>
+    <div>
+
       <Switch>
-        <Route path="/" exact>
-          <Home />
+        <Route path="/profile">
+          <Profile/>
         </Route>
-        <Route path="/landing" exact>
-          <Landing />
+        <Route path="/sentrequest">
+          <SentRequests/>
         </Route>
-        <Route path="/login" exact>
+        <Route path="/requestpage">
+          <RequestPage />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route exact path="/login">
           <Signin />
         </Route>
         <Route path="/signup" exact>
           <Signup />
         </Route>
-        <Route path="/request" exact>
-          <Request />
+        <Route path="/" exact>
+          <Home />
         </Route>
       </Switch>
-    </Router>
+      <Footer />
+
+    </div>
   );
 }
 
