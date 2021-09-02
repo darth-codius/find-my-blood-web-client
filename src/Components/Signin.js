@@ -1,6 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Signin.css";
+import axios from "axios";
+
 export default function Signin() {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [user, setUser] = useState("");
+
+  let history = useHistory();
+
+  const handleSignin = async (e) => {
+     e.preventDefault(); 
+     console.log("submitted");
+     try {
+      let res = await axios.post(
+        "https://find-my-blood.herokuapp.com/hospital/login",
+        {
+          password,
+          email,
+        }
+      );
+      let user = res.data.data
+      let token = res.data.token
+      console.log(res.data);
+      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('token', JSON.stringify(token))
+      setUser(user);
+
+      history.push("/Request")
+    }
+    catch (error) {
+      console.error(error);
+    }
+    };
+     
   return (
     <div className="container-fluid">
       <div className="getblood">
@@ -21,12 +56,19 @@ export default function Signin() {
           </div>
           <p className="back">Welcome Back</p>
 
-          <form class="col-g-3">
+          <form class="col-g-3" onSubmit={handleSignin}>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">
                 Email Address
               </label>
-              <input type="email" class="form-control" id="inputEmail4"></input>
+              <input 
+              type="email" 
+              class="form-control" 
+              id="inputEmail4"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              ></input>
             </div>
 
             <div class="col-md-6">
@@ -34,9 +76,12 @@ export default function Signin() {
                 Password
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="inputPassword"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               ></input>
             </div>
             <div className="p2">
@@ -46,7 +91,7 @@ export default function Signin() {
 
           <button className="button1">LOGIN</button>
           <p>
-            Need an account?<span className="signup">Register</span>
+            Need an account?<Link to="/Signup" className="signup">Register</Link>
           </p>
         </div>
       </div>

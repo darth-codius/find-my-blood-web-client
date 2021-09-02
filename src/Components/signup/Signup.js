@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './Signup.css'
+import axios from "axios"
+
 
 export default function Signup() {
-  return (
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+
+  const handleSignup = async () => {
+    try {
+      let res = await axios.post(
+        "https://find-my-blood.herokuapp.com/hospital/signup",
+        {
+          name,
+          email,
+          password,
+          confirmPassword,
+        }
+      ); 
+     alert("Registration successful");
+     } catch (error) {
+       console.error(error);
+       alert ('Registration Failed. Try Again');
+     }
+     };
+     return (
+          
     <div className="row flex-fill">
       <div className="row-container ">
         <img src="../../../img/logo.svg" alt="" />
@@ -22,18 +48,32 @@ export default function Signup() {
           </div>
           <p>Create an account</p>
 
-          <form class="col-g-4">
+          <form class="col-g-4" onSubmit={handleSignup}>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">
                 Hospital Name
               </label>
-              <input type="name" class="form-control" id="inputName4"></input>
+              <input 
+              type="text"
+              class="form-control" 
+              id="inputName4"
+              value={name}
+              onChange={(e)=> setName(e.target.value)}
+              required
+              ></input>
             </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">
                 Email Address
               </label>
-              <input type="email" class="form-control" id="inputEmail4"></input>
+              <input 
+              type="email" 
+              class="form-control" 
+              id="inputEmail4"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
+              required
+            ></input>
             </div>
 
             <div class="col-md-6">
@@ -41,9 +81,12 @@ export default function Signup() {
                 Password
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="inputPassword"
+                value={password}
+                onChange={(e)=> setPassword(e.target.value)}
+                required
               />
             </div>
             <div class="col-md-6">
@@ -51,19 +94,27 @@ export default function Signup() {
                 Confirm Password
               </label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="inputPassword"
+                value={confirmPassword}
+              onChange={(e)=> setConfirmPassword(e.target.value)}
+              required
               />
-            </div>
-          </form>
-
-          <button className="button2">Register</button>
-          <p>
-            Already have an account?<span className="signin1">Login</span>
+              </div>
+              </form>
+              <button className="button2" type="submit" onClick={handleSignup}>
+              Register
+             </button>
+             <p>
+            Already have an account?
+            <Link to="/Login" className="signin1">
+            Login
+            </Link>
           </p>
         </div>
       </div>
     </div>
   );
 }
+
