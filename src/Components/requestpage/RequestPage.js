@@ -1,12 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import "./RequestPage.css"
 
 
 function RequestPage() {
-  const [search, setSearch] = useState({});
+  // const [search, setSearch] = useState({});
+
+  // const token = JSON.parse(localStorage.getItem('token'))
+  // const user = JSON.parse(localStorage.getItem('user'))
+
+  // const headers = {
+  //   'Content-Type': 'application/json',
+  //   'Authorization': `${token}`
+  // }
+
+
+
+  // useEffect(() => {
+
+  //   async function getData() {
+  //     try {
+  //       const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/blood/search",
+  //         { bloodGroup : user.bloodGroup }, { headers })
+  //       console.log(response);
+  //       // setSearch(data)
+
+  //     } catch (error) {
+
+  //     }
+  //   };
+
+  //   getData()
+  // }, [])
+
+
+  const [bloodGroup, setBloodGroup] = useState("");
+  const [units, setUnits] = useState("");
+  const [banks, setBanks] = useState([])
 
   const token = JSON.parse(localStorage.getItem('token'))
   const user = JSON.parse(localStorage.getItem('user'))
@@ -15,28 +47,32 @@ function RequestPage() {
     'Content-Type': 'application/json',
     'Authorization': `${token}`
   }
-  
-  useEffect(() => {
 
-    async function getData() {
-      try {
-        const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/blood/search",
-          { bloodGroup : user.bloodGroup }, { headers })
-        console.log(response);
-        // setSearch(data)
 
-      } catch (error) {
 
+  const handleFindblood = async () => {
+    try {
+      let res = await axios.post(
+        "https://find-my-blood.herokuapp.com/hospital/blood/search",
+        {
+          bloodGroup,
+        }, {
+        headers: headers
       }
-    };
+      );
+      alert("Request sent");
+      console.log(res.data);
+      setBanks(() => [...res.data.data])
 
-    getData()
-  }, [])
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="..">
           <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
@@ -53,11 +89,11 @@ function RequestPage() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
               <Link to="/profile">
-              <img src="../../../img/Profile.svg" alt="" />
+                <img src="../../../img/Profile.svg" alt="" />
               </Link>
             </li>
           </ul>
@@ -65,88 +101,49 @@ function RequestPage() {
       </nav>
 
       <h3 className="requesttext">Find A Blood Bank or Drive Close To You</h3>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <input></input>
-          </div>
-          <div class="col">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-                checked
-              />
-              <label class="form-check-label" for="exampleRadios1">
-                Postal Code
-              </label>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="exampleRadios"
-                id="exampleRadios1"
-                value="option1"
-                checked
-              />
-              <label class="form-check-label" for="exampleRadios1">
-                City Name
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="form-group col-md-10">
-              <label for="inputState">Blood Group Request:</label>
-              <select id="inputState" class="form-control">
-                <option selected>Blood group...</option>
-                <option>{user.bloodGroup}</option>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div className="form-group col-md-10">
+              <label htmlFor="inputState">Blood Group Request:</label>
+              <select id="inputState" className="form-control" value={bloodGroup}
+                onChange={(e) => setBloodGroup(e.target.value)}>
+                <option defaultValue>Blood group...</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
               </select>
             </div>
           </div>
-          <div class="col">
-            <div class="form-group col-md-10">
-              <label for="inputState">Show locations within:</label>
-              <select id="inputState" class="form-control">
-                <option selected>Search Locations...</option>
-                <option>{user.address}</option>
-                <option>2</option>
-              </select>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group col-md-10">
-              <label for="inputState">Units Required:</label>
-              <select id="inputState" class="form-control">
-                <option selected>Units...</option>
-                <option>{user.units}</option>
-              </select>
+          <div className="col">
+            <div className="form-group col-md-10">
+              <label htmlFor="inputState">Units Required:</label>
+              <input id="inputState" className="form-control" placeholder="units" value={units}
+                onChange={(e) => setUnits(e.target.value)}></input>
+
             </div>
           </div>
         </div>
       </div>
 
       <div className="reqbuttondiv">
-        <button className="requstbutton">Find Blood</button>
+        <button className="requstbutton" type="submit" onClick={handleFindblood}>Find Blood</button>
       </div>
 
       <div className="requesttable">
         <hr />
         <h4>Available Blood Banks</h4>
 
-        <table class="table table-sm">
+        <table className="table table-sm">
           <thead>
-            <tr class="bg-danger text-center">
+            <tr className="bg-danger text-center">
               <th scope="col"></th>
               <th scope="col">Blood Bank</th>
               <th scope="col">Location</th>
@@ -155,27 +152,19 @@ function RequestPage() {
             </tr>
           </thead>
           <tbody>
-            <tr class="table-danger requestrow">
-              <th scope="row"></th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
-            <tr class="table-danger requestrow">
-              <th scope="row"></th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr class="table-danger requestrow">
-              <th scope="row"></th>
-              <td>Larry the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
+            {
+              banks.map((bank, index) => {
+                return (
+                  <tr className="table-danger requestrow" key={index}>
+                    <th scope="row"></th>
+                    <td>{bank.hospital.name}</td>
+                    <td>`${bank.hospital.address} ${banks.hospital.state}`</td>
+                    <td>`${bank.units} Units`</td>
+                    <td>{bank.bloodGroup}</td>
+                  </tr>
+                )
+              })
+            }
           </tbody>
         </table>
       </div>

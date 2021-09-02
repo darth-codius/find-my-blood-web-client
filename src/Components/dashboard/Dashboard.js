@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import RequestRow from "../request_row/RequestRow";
 import "./Dashboard.css";
 
 export default function Request() {
-  const [request, setRequest] = useState({});
+  const [request, setRequest] = useState({
+    status: "",
+    sentRequest: [],
+    recievedRequest: []
+  });
 
   const token = JSON.parse(localStorage.getItem('token'))
   const user = JSON.parse(localStorage.getItem('user'))
@@ -21,7 +26,11 @@ export default function Request() {
         const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/request/all",
           { hospital: user.name }, { headers })
         console.log(response);
-        // setRequest(data)
+        setRequest({
+          status: response.data.status,
+          sentRequest: [...response.data.sentRequest],
+          recievedRequest: [...response.data.recievedRequest]
+        })
 
       } catch (error) {
 
@@ -31,8 +40,8 @@ export default function Request() {
     getData()
   }, [])
   return (
-    <div className="container4">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="..">
           <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
@@ -49,17 +58,17 @@ export default function Request() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
               <Link to="/profile">
-              <img src="../../../img/Profile.svg" alt="" />
+                <img src="../../../img/Profile.svg" alt="" />
               </Link>
             </li>
           </ul>
         </div>
       </nav>
-      <div className="container-fluid">
+      <div className="container4">
         <div className="row">
           <div className="col-md-5">
             <h1 className="save">Get Blood, Save Lives</h1>
@@ -77,9 +86,9 @@ export default function Request() {
         </div>
         <div className="table">
           <h2>Sent Request</h2>
-          <table class="table caption-top">
+          <table className="table caption-top">
             <thead>
-              <tr class="bg-danger">
+              <tr className="bg-danger">
                 <th scope="col">Blood Bank</th>
                 <th scope="col">Blood group</th>
                 <th scope="col">Units Requested</th>
@@ -87,45 +96,46 @@ export default function Request() {
               </tr>
             </thead>
             <tbody>
-              { }//todo
-            </tbody>
-          </table>
-        </div>
-        <div className="requestpageP">
-        <Link to="/sentrequest">
-          <p>See More <img src="../../../img\Arrow 3.svg" alt=""/></p>
-        </Link>
-        </div>
-        <div>
-          <h3>Incoming Request</h3>
-          <table class="table caption-top">
-            <thead>
-              <tr class="bg-danger">
-                <th scope="col">Blood Bank</th>
-                <th scope="col">Blood group</th>
-                <th scope="col">Units Requested</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="table-danger">
-                <th scope="row"></th>
-                <td>-----------</td>
-                <td>-----------</td>
-                <td>-----------</td>
-              </tr>
-              <tr class="table-danger">
-                <th scope="row"></th>
-                <td>-----------</td>
-                <td>-----------</td>
-                <td>-----------</td>
-              </tr>
+              {
+                request['sentRequest'].map((request, index) => {
+                  return (
+                    <RequestRow request={request} key={index} />
+                  )
+                })
+              }
             </tbody>
           </table>
         </div>
         <div className="requestpageP">
           <Link to="/sentrequest">
-          <p>See More <img src="../../../img\Arrow 3.svg" alt=""/></p>
+            <p>See More <img src="../../../img\Arrow 3.svg" alt="" /></p>
+          </Link>
+        </div>
+        <div>
+          <h3>Incoming Request</h3>
+          <table className="table caption-top">
+            <thead>
+              <tr className="bg-danger">
+                <th scope="col">Blood Bank</th>
+                <th scope="col">Blood group</th>
+                <th scope="col">Units Requested</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                request['recievedRequest'].map((request, index) => {
+                  return (
+                    <RequestRow request={request} key={index} />
+                  )
+                })
+              }
+            </tbody>
+          </table>
+        </div>
+        <div className="requestpageP">
+          <Link to="/sentrequest">
+            <p>See More <img src="../../../img\Arrow 3.svg" alt="" /></p>
           </Link>
         </div>
       </div>

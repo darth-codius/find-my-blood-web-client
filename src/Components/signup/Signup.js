@@ -20,12 +20,13 @@ export default function Signup() {
           confirmPassword,
         }
       );
+      console.log(res)
       alert("Registration successful");
-    
-      
+
+
     } catch (error) {
       console.error(error);
-      alert ('Registration Failed, Email already exists, Try Again');
+      alert('Registration Failed, Email already exists, Try Again');
     }
   };
 
@@ -35,7 +36,7 @@ export default function Signup() {
         <img src="../../../img/logo.svg" alt="" />
       </div>
       <div className="row-container flex-fill">
-        <div class="col-5">
+        <div className="col-5">
           <div className="image">
             <img src="../../../img/Blooddonation.svg" alt="" />
             <p className="pdonor">
@@ -43,33 +44,33 @@ export default function Signup() {
             </p>
           </div>
         </div>
-        <div class="col-5">
+        <div className="col-5">
           <div className="heading">
             <h1>Register</h1>
           </div>
           <p>Create an account</p>
 
-          <form class="col-g-4" onSubmit={handleSignup}>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
+          <form className="col-g-4" onSubmit={handleSignup}>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
                 Hospital Name
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="inputName4"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               ></input>
             </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
                 Email Address
               </label>
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="inputEmail4"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -77,26 +78,26 @@ export default function Signup() {
               ></input>
             </div>
 
-            <div class="col-md-6">
-              <label for="inputPassword" class="form-label">
+            <div className="col-md-6">
+              <label htmlFor="inputPassword" className="form-label">
                 Password
               </label>
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="inputPassword"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
-            <div class="col-md-6">
-              <label for="inputPassword" class="form-label">
+            <div className="col-md-6">
+              <label htmlFor="inputPassword" className="form-label">
                 Confirm Password
               </label>
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="inputPassword"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}

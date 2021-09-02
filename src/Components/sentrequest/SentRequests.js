@@ -4,7 +4,7 @@ import "./SentRequest.css"
 function SentRequests() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="..">
           <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
@@ -21,9 +21,9 @@ function SentRequests() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
               <button type="button" className="navbutton1">
                 Make a Request
               </button>
@@ -33,19 +33,19 @@ function SentRequests() {
       </nav>
 
       <div className="sentrequestdiv">
-        <div class="card mb-3 sentrequestcard" style={{ maxWidth: "540px" }}>
-          <div class="row g-0">
-            <div class="col-md-4">
+        <div className="card mb-3 sentrequestcard" style={{ maxWidth: "540px" }}>
+          <div className="row g-0">
+            <div className="col-md-4">
               <img
                 src="../../../img/Dashboard icon.svg"
-                class="img-fluid rounded-start"
+                className="img-fluid rounded-start"
                 alt="..."
               />
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Okwe General Hospital, Asaba</h5>
-                <p class="card-text">
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">Okwe General Hospital, Asaba</h5>
+                <p className="card-text">
                   144 Mariam Babangida road, Asaba, Delta State.
                 </p>
               </div>
@@ -56,9 +56,9 @@ function SentRequests() {
         <div className="reqbuttondiv">
           <h4>Incoming Requests</h4>
 
-          <table class="table table-sm">
+          <table className="table table-sm">
             <thead>
-              <tr class="bg-danger text-center">
+              <tr className="bg-danger text-center">
                 <th scope="col"></th>
                 <th scope="col">Blood Bank</th>
                 <th scope="col">Blood group</th>
@@ -67,7 +67,7 @@ function SentRequests() {
               </tr>
             </thead>
             <tbody>
-              <tr class="table-danger requestrow">
+              <tr className="table-danger requestrow">
                 <th scope="row"></th>
                 <td>Federal Medical Centre(FMC)Asaba</td>
                 <td>O+</td>
@@ -76,7 +76,7 @@ function SentRequests() {
                   <img src="../../../img/Group 716.svg" alt=".." />
                 </td>
               </tr>
-              <tr class="table-danger requestrow">
+              <tr className="table-danger requestrow">
                 <th scope="row"></th>
                 <td>Federal Medical Centre(FMC)Asaba</td>
                 <td>O+</td>
@@ -85,7 +85,7 @@ function SentRequests() {
                   <img src="../../../img/Group 717.svg" alt=".." />
                 </td>
               </tr>
-              <tr class="table-danger requestrow">
+              <tr className="table-danger requestrow">
                 <th scope="row"></th>
                 <td>Federal Medical Centre(FMC)Asaba</td>
                 <td>O+</td>
