@@ -1,0 +1,22 @@
+.profilebutton {
+    width: 150px;
+    background-color: #fff;
+    border: solid 1px #323131;
+    border-radius: 32px;
+    height: 45px;
+} 
+.profile-container {
+    margin-top: 30px;
+    
+}
+.profile-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 48px;
+
+}
+.profile-container1 {
+    padding: 5px 60px;
+    margin-top: 40px;
+}

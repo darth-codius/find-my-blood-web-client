@@ -1,0 +1,23 @@
+.requesttext {
+    text-align: center;
+    margin-top: 32px;
+    line-height: 36px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ed394a;
+  }
+ 
+.requstbutton {
+    background-color: #ed394a;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 32px;
+    border: none;
+}
+
+  .requesttable {
+    padding: 0px 50px;
+  }
+  
