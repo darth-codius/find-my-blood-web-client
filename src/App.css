@@ -72,56 +72,23 @@
   border: none;
 }
 
-.container-fluid {
-  background-color: #ed394a;
-}
-.footer {
-  background-color: #ed394a;
-  opacity: 0.9;
-  color: white;
-  height: 402px;
-  border-radius: 4px;
-  padding: 5px 60px;
-}
 
-.requesttext {
-  text-align: center;
-  margin-top: 32px;
-  line-height: 36px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #ed394a;
-}
+
 
 .reqbuttondiv {
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-.requstbutton {
-  background-color: #ed394a;
-  color: white;
-  width: 200px;
-  height: 40px;
-  border-radius: 32px;
-  border: none;
-}
+  margin-top: 30px;
+margin-bottom: 32px;
+text-align: center;
+} 
 .requestrow {
   height: 80px;
   text-align: center;
 }
-.requesttable {
-  padding: 0px 50px;
-}
 
-.sentrequestcard {
-  border: none;
-}
 
-.sentrequestdiv {
-  padding: 60px 70px;
-}
+
+
+
 
 
 
@@ -191,39 +158,9 @@
   min-width: -150px;
 }
 
-.make {
-  color: white;
-  background-color: #ed394a;
-  margin-top: 20px;
-  border-radius: 32px;
-  margin-left: 90px;
-  width: 276px;
-  height: 64px;
-  left: 121px;
-  top: 520px;
-}
-.save {
-  font-size: 101px;
-  font-weight: 700px;
-  line-height: 108px;
-  font-family: sans-serif;
-  margin-bottom: 30px;
-  margin-top: 60px;
-  margin-left: 90px;
-}
 
-.life {
-  margin-left: 90px;
-  font-size: 20px;
-}
 
-.container4 {
-  padding-left: 120px;
-  padding-right: 120px;
-}
-.table {
-  margin-bottom: 120px;
-}
+
 .btn-outline-success {
   background-color: red;
   width: 232px;
@@ -249,4 +186,8 @@
   display: flex;
   justify-content: center;
   align-items:center;
+}
+
+.requestpageP {
+  text-align: right;
 }

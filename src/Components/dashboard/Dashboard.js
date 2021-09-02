@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./Dashboard.css";
 
 export default function Request() {
   const [request, setRequest] = useState({});
@@ -51,7 +52,9 @@ export default function Request() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <Link to="/profile">
               <img src="../../../img/Profile.svg" alt="" />
+              </Link>
             </li>
           </ul>
         </div>
@@ -88,6 +91,11 @@ export default function Request() {
             </tbody>
           </table>
         </div>
+        <div className="requestpageP">
+        <Link to="/sentrequest">
+          <p>See More <img src="../../../img\Arrow 3.svg" alt=""/></p>
+        </Link>
+        </div>
         <div>
           <h3>Incoming Request</h3>
           <table class="table caption-top">
@@ -114,6 +122,11 @@ export default function Request() {
               </tr>
             </tbody>
           </table>
+        </div>
+        <div className="requestpageP">
+          <Link to="/sentrequest">
+          <p>See More <img src="../../../img\Arrow 3.svg" alt=""/></p>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./RequestPage.css"
 
 
 function RequestPage() {
+  const [search, setSearch] = useState({});
+
+  const token = JSON.parse(localStorage.getItem('token'))
+  const user = JSON.parse(localStorage.getItem('user'))
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `${token}`
+  }
+  
+  useEffect(() => {
+
+    async function getData() {
+      try {
+        const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/blood/search",
+          { bloodGroup : user.bloodGroup }, { headers })
+        console.log(response);
+        // setSearch(data)
+
+      } catch (error) {
+
+      }
+    };
+
+    getData()
+  }, [])
+
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
@@ -24,7 +56,9 @@ function RequestPage() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <Link to="/profile">
               <img src="../../../img/Profile.svg" alt="" />
+              </Link>
             </li>
           </ul>
         </div>
@@ -76,7 +110,7 @@ function RequestPage() {
               <label for="inputState">Blood Group Request:</label>
               <select id="inputState" class="form-control">
                 <option selected>Blood group...</option>
-                <option>1</option>
+                <option>{user.bloodGroup}</option>
               </select>
             </div>
           </div>
@@ -85,7 +119,7 @@ function RequestPage() {
               <label for="inputState">Show locations within:</label>
               <select id="inputState" class="form-control">
                 <option selected>Search Locations...</option>
-                <option>1</option>
+                <option>{user.address}</option>
                 <option>2</option>
               </select>
             </div>
@@ -95,7 +129,7 @@ function RequestPage() {
               <label for="inputState">Units Required:</label>
               <select id="inputState" class="form-control">
                 <option selected>Units...</option>
-                <option>1</option>
+                <option>{user.units}</option>
               </select>
             </div>
           </div>

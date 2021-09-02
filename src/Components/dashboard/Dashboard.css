@@ -1,0 +1,39 @@
+.container4 {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .container-fluid {
+    background-color: #ed394a;
+  }
+
+  .make {
+    color: white;
+    background-color: #ed394a;
+    margin-top: 20px;
+    border-radius: 32px;
+    margin-left: 90px;
+    width: 276px;
+    height: 64px;
+    left: 121px;
+    top: 520px;
+  }
+  .save {
+    font-size: 101px;
+    font-weight: 700px;
+    line-height: 108px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-left: 90px;
+  }
+  
+  .life {
+    margin-left: 90px;
+    font-size: 20px;
+  }
+  .table {
+    margin-bottom: 120px;
+  }
+  .requestpageP {
+    text-align: right;
+  }

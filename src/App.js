@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Request from "./Components/Request";
-import Signin from "./Components/Signin";
+
+import Dashboard from "./Components/dashboard/Dashboard";
+import Signin from "./Components/signin/Signin";
 import Signup from "./Components/signup/Signup";
 import Home from "./Components/home/Home";
-import Footer from "./Components/Footer";
-import RequestPage from "./Components/RequestPage";
+import Footer from "./Components/footer/Footer";
+import RequestPage from "./Components/requestpage/RequestPage";
+import SentRequests from "./Components/sentrequest/SentRequests";
+import Profile from "./Components/profile/Profile"
 import "./App.css";
 
 function App() {
@@ -14,11 +17,17 @@ function App() {
     <div>
 
       <Switch>
+        <Route path="/profile">
+          <Profile/>
+        </Route>
+        <Route path="/sentrequest">
+          <SentRequests/>
+        </Route>
         <Route path="/requestpage">
           <RequestPage />
         </Route>
-        <Route path="/request">
-          <Request />
+        <Route path="/dashboard">
+          <Dashboard />
         </Route>
         <Route exact path="/login">
           <Signin />

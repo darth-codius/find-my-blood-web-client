@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import "./SignIn.css";
 
 
 export default function Signin() {
@@ -30,7 +31,7 @@ export default function Signin() {
       setUser(user);
 
 
-      history.push("/Request")
+      history.push("/dashboard")
 
     } catch (error) {
       console.error(error);
