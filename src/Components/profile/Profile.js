@@ -29,7 +29,8 @@ function Profile() {
             </ul>
           </div>
         </nav>
-        <div>
+
+        <div className="profile-container">
           <div class="container">
             <div class="row">
               <div class="col-md-5">
@@ -72,6 +73,23 @@ function Profile() {
             <div class="col">+234 7041659382</div>
           </div>
         </div>
+        
+        <div className="profile-container1">
+        <h3 className="profile-text">AVAILABLE UNITS</h3>
+
+        <table class="table table-sm">
+          <thead>
+            <tr class="bg-danger text-center">
+              <th scope="col"></th>
+              <th scope="col">Blood Bank</th>
+              <th scope="col">Location</th>
+              <th scope="col">Capacity</th>
+              <th scope="col">Blood Group</th>
+            </tr>
+          </thead>
+        </table>
+        </div>
+        
       </div>
     );
 }

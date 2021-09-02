@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../Footer'
+// import Footer from '../Footer'
 
 import './Home.css'
 
@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="/">
-          <img src="../../../img/blood 1.png" alt="" />
+          <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
         </a>
         <button
@@ -111,7 +111,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

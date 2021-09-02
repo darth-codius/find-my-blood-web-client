@@ -30,7 +30,7 @@ export default function Signup() {
      return (
           
     <div className="row flex-fill">
-      <div className="row-container ">
+      <div className="row-container">
         <img src="../../../img/logo.svg" alt="" />
       </div>
       <div className="row-container flex-fill">
