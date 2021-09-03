@@ -11,8 +11,8 @@ export default function Signin() {
 
   let history = useHistory();
 
-  const handleSignin = async (e) => {
-    e.preventDefault();
+  const handleSignin = async () => {
+    
     console.log("submitted");
     try {
       let res = await axios.post(
@@ -54,16 +54,16 @@ export default function Signin() {
           <div className="heading">
             <h1>LOGIN</h1>
           </div>
-          <p>Welcome Back</p>
+          <p className="pimg1">Welcome Back</p>
 
           <form className="col-g-3" onSubmit={handleSignin}>
             <div className="col-md-6">
-              <label htmlFor="inputEmail4" className="form-label">
+              <label htmlFor="inputEmail4" className="form-label pdonor1">
                 Email Address
               </label>
               <input
                 type="email"
-                className="form-control"
+                className="form-control registeri"
                 id="inputEmail4"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -72,15 +72,16 @@ export default function Signin() {
             </div>
 
             <div className="col-md-6">
-              <label htmlFor="inputPassword" className="form-label">
+              <label htmlFor="inputPassword" className="form-label pdonor1">
                 Password
               </label>
               <input
                 type="password"
-                className="form-control"
+                className="form-control registeri"
                 id="inputPassword"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                
               ></input>
             </div>
             <div className="p2">
@@ -91,7 +92,7 @@ export default function Signin() {
           <button className="button1" type="sunmit" onClick={handleSignin}>
             LOGIN
           </button>
-          <p>
+          <p className="pimg1">
             Need an account?
             <Link to="/signup" className="signup">
               Register
