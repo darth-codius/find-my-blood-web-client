@@ -1,11 +1,5 @@
-.getblood {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 14.91px;
-  line-height: 22.37px;
-  margin-top: 5px;
-  margin-left: -12px;
-}
+
+
 
 .navblood {
   padding: 5px 90px;
@@ -54,6 +48,7 @@
   background-color: rgb(184, 179, 163);
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -90,6 +85,10 @@ text-align: center;
 
 
 
+.row-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 
 .button1 {
@@ -119,9 +118,7 @@ text-align: center;
 
 
 
-.p2 {
-  margin-left: 213px;
-}
+
 .pdonor {
   margin-left: 270px;
 }
@@ -133,30 +130,25 @@ text-align: center;
   margin-top: -0px;
 }
 
-.signup {
-  color: rgb(0, 195, 255);
-  margin-left: 20px;
-}
-.signin1 {
-  color: rgb(0, 195, 255);
-  margin-left: 10px;
-}
 .pimg {
-  margin-left: 190px;
+  text-align: center;
+  margin-top: -120px;
+  /* margin-left: 190px;
   margin-top: -50px;
-  font-size: smaller;
+  font-size: smaller; */
 }
 .getblood {
   margin-left: 100px;
   min-width: -100px;
+  margin-bottom: 20px;
+}
+.col {
+  margin-bottom: 0px;
 }
 .getblood1 {
   margin-left: 100px;
   min-width: -150px;
 }
-
-
-
 
 .btn-outline-success {
   background-color: red;
