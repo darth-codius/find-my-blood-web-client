@@ -1,3 +1,38 @@
 .container-fluid {
-  background-color: #ed394a;
+  background-color: white;
+}
+
+.signin-row {
+  align-items: center;
+}
+.getblood {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14.91px;
+  line-height: 22.37px;
+  margin-top: 5px;
+  margin-left: -12px;
+}
+.back {
+  margin-bottom: 60px;
+}
+.p2 {
+  margin-left: 213px;
+}
+.button1 {
+  background-color: red !important;
+}
+
+.button1 {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 200px;
+  height: 64px;
+  border-radius: 32px;
+  padding: 10px;
+  text-decoration-color: white;
+}
+.signup {
+  color: rgb(0, 195, 255);
+  margin-left: 20px;
 }

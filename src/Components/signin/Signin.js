@@ -8,7 +8,6 @@ import "./SignIn.css";
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState("");
 
   let history = useHistory();
 
@@ -28,8 +27,6 @@ export default function Signin() {
       console.log(res.data);
       localStorage.setItem('user', JSON.stringify(user))
       localStorage.setItem('token', JSON.stringify(token))
-      setUser(user);
-
 
       history.push("/dashboard")
 
@@ -43,8 +40,8 @@ export default function Signin() {
       <div className="getblood">
         <img src="../../../img/getblood.jpeg" alt="" />
       </div>
-      <div class="row">
-        <div class="col">
+      <div className="row">
+        <div className="col">
           <div className="image">
             <img src="../../../img/Blood donation-rafiki.svg" alt="" />
             <p className="pimg">
@@ -52,20 +49,20 @@ export default function Signin() {
             </p>
           </div>
         </div>
-        <div class="col">
+        <div className="col">
           <div className="heading">
             <h1>LOGIN</h1>
           </div>
           <p>Welcome Back</p>
 
-          <form class="col-g-3" onSubmit={handleSignin}>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
+          <form className="col-g-3" onSubmit={handleSignin}>
+            <div className="col-md-6">
+              <label htmlFor="inputEmail4" className="form-label">
                 Email Address
               </label>
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="inputEmail4"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -73,13 +70,13 @@ export default function Signin() {
               ></input>
             </div>
 
-            <div class="col-md-6">
-              <label for="inputPassword" class="form-label">
+            <div className="col-md-6">
+              <label htmlFor="inputPassword" className="form-label">
                 Password
               </label>
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="inputPassword"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

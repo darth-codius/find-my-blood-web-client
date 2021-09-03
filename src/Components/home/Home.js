@@ -1,21 +1,21 @@
 import React from 'react'
-// import Footer from '../Footer'
+
 
 import './Home.css'
 
 
 export default function Home() {
 
-  const goToLogin = (event) =>{
+  const goToLogin = (event) => {
     window.location.href = "/login"
   }
 
-  const goToSignup = (event) =>{
+  const goToSignup = (event) => {
     window.location.href = "/signup"
   }
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light navblood">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="/">
           <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
@@ -32,14 +32,14 @@ export default function Home() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
               <button type="button" className="navbutton" onClick={goToLogin}>
                 Login
               </button>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <button type="button" className="navbutton1" onClick={goToSignup}>
                 Register
               </button>
@@ -48,14 +48,14 @@ export default function Home() {
         </div>
       </nav>
 
-      <div class="row-container">
-        <div class="row flex-fill">
-          <div class="col-md-5">
-            <div class="card-body" className="card-body">
-              <h1 class="card-title" className="cardtittle">
+      <div className="row-container">
+        <div className="row flex-fill">
+          <div className="col-md-5">
+            <div className="card-body card-body">
+              <h1 className="card-title cardtittle">
                 Get blood, Save Lives
               </h1>
-              <p class="card-text" className="cardtext">
+              <p className="card-text cardtext">
                 We are linked by blood, and blood is memory without language
               </p>
               <button type="button" className="button3">
@@ -63,22 +63,22 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div class="col-md-5 img-container">
+          <div className="col-md-5 img-container">
             <img
               src="../../../img/Laboratory-pana.svg"
-              class="img-fluid rounded-start"
+              className="img-fluid rounded-start"
               alt="..."
             />
           </div>
         </div>
       </div>
 
-      <div class="row-container">
-        <div class="row flex-fill">
-          <div class="col-md-5 img-container">
+      <div className="row-container">
+        <div className="row flex-fill">
+          <div className="col-md-5 img-container">
             <img src="../../../img/Double Iphones 2.svg" alt="..." />
           </div>
-          <div class="col-md-5">
+          <div className="col-md-5">
             <h1 className="title1">Download our mobile app</h1>
             <span className="span1"></span>
 
@@ -94,9 +94,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="row-container">
-        <div class="row flex-fill">
-          <div class="col-md-5">
+      <div className="row-container">
+        <div className="row flex-fill">
+          <div className="col-md-5">
             <h1 className="title1">How it works?</h1>
             <span className="span1"></span>
             <ul className="list">
@@ -106,7 +106,7 @@ export default function Home() {
             </ul>
             <button className="button4">Make a Request</button>
           </div>
-          <div class="col-md-5 img-container">
+          <div className="col-md-5 img-container">
             <img src="../../../img/Single Iphone 2.svg" alt="single Iphone" />
           </div>
         </div>
