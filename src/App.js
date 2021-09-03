@@ -7,6 +7,7 @@ import Signup from "./Components/signup/Signup";
 import Home from "./Components/home/Home";
 import Footer from "./Components/footer/Footer";
 import RequestPage from "./Components/requestpage/RequestPage";
+import IncomingRequest from "./Components/incomingrequest/IncomingRequest";
 import SentRequests from "./Components/sentrequest/SentRequests";
 import Profile from "./Components/profile/Profile"
 import "./App.css";
@@ -14,11 +15,14 @@ import "./App.css";
 function App() {
 
   return (
-    <div>
+    <div className="App">
 
       <Switch>
         <Route path="/profile">
           <Profile/>
+        </Route>
+        <Route path="/incomingrequest">
+          <IncomingRequest/>
         </Route>
         <Route path="/sentrequest">
           <SentRequests/>

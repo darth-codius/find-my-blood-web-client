@@ -6,35 +6,6 @@ import "./RequestPage.css"
 
 
 function RequestPage() {
-  // const [search, setSearch] = useState({});
-
-  // const token = JSON.parse(localStorage.getItem('token'))
-  // const user = JSON.parse(localStorage.getItem('user'))
-
-  // const headers = {
-  //   'Content-Type': 'application/json',
-  //   'Authorization': `${token}`
-  // }
-
-
-
-  // useEffect(() => {
-
-  //   async function getData() {
-  //     try {
-  //       const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/blood/search",
-  //         { bloodGroup : user.bloodGroup }, { headers })
-  //       console.log(response);
-  //       // setSearch(data)
-
-  //     } catch (error) {
-
-  //     }
-  //   };
-
-  //   getData()
-  // }, [])
-
 
   const [bloodGroup, setBloodGroup] = useState("");
   const [units, setUnits] = useState("");
@@ -61,13 +32,16 @@ function RequestPage() {
         headers: headers
       }
       );
-      alert("Request sent");
       console.log(res.data);
       setBanks(() => [...res.data.data])
 
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const handleRequest = async (e) => {
+
   };
 
 
@@ -156,11 +130,11 @@ function RequestPage() {
             {
               banks.map((bank, index) => {
                 return (
-                  <tr className="table-danger requestrow" key={index}>
+                  <tr className="table-danger requestrow" key={index} onClick={handleRequest}>
                     <th scope="row"></th>
                     <td>{bank.hospital.name}</td>
-                    <td>`${bank.hospital.address} ${banks.hospital.state}`</td>
-                    <td>`${bank.units} Units`</td>
+                    <td>{bank.hospital.address} {bank.hospital.state}</td>
+                    <td>{bank.units} Units</td>
                     <td>{bank.bloodGroup}</td>
                   </tr>
                 )

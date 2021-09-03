@@ -6,26 +6,31 @@
   .make {
     color: white;
     background-color: #ed394a;
-    margin-top: 20px;
+    margin-top: 50px;
     border-radius: 32px;
-    margin-left: 90px;
-    width: 276px;
-    height: 64px;
+    
+    width: 260px;
+    height: 50px;
     left: 121px;
     top: 520px;
+    border: none;
   }
   .save {
-    font-size: 101px;
-    font-weight: 700px;
+    font-family: "Poppins", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
     line-height: 108px;
-    font-family: sans-serif;
-    margin-bottom: 30px;
+    
+    
+    
     margin-top: 60px;
-    margin-left: 90px;
+    
   }
   
   .life {
-    margin-left: 90px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
     font-size: 20px;
   }
   .table {
@@ -33,4 +38,9 @@
   }
   .requestpageP {
     text-align: right;
+  }
+
+  .imgdashb {
+    margin-left: -320px;
+    z-index: -1;
   }
