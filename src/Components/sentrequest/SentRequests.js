@@ -54,7 +54,7 @@ function SentRequests() {
         </div>
 
         <div className="reqbuttondiv">
-          <h4>Incoming Requests</h4>
+          <h4>Sent Requests</h4>
 
           <table className="table table-sm">
             <thead>

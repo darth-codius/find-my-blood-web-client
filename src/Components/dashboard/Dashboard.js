@@ -70,7 +70,7 @@ export default function Request() {
       </nav>
       <div className="container4">
         <div className="row">
-          <div className="col-md-5">
+          <div className="col-md-8">
             <h1 className="save">Get Blood, Save Lives</h1>
             <p className="life">
               There's blood beneath every layer of skin, <br></br>the blood is
@@ -80,7 +80,7 @@ export default function Request() {
               <button className="make">Make a Request</button>
             </Link>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-3 imgdashb">
             <img src="../../../img/bloodgroup(1).svg" alt="" />
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function Request() {
           </table>
         </div>
         <div className="requestpageP">
-          <Link to="/sentrequest">
+          <Link to="/incomingrequest">
             <p>See More <img src="../../../img\Arrow 3.svg" alt="" /></p>
           </Link>
         </div>

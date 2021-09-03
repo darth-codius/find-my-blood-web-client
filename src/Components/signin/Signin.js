@@ -37,8 +37,9 @@ export default function Signin() {
 
   return (
     <div className="container-fluid">
-      <div className="getblood">
-        <img src="../../../img/getblood.jpeg" alt="" />
+      <div className="signinheader">
+        <img src="../../../img/blood 1.svg" alt="" />
+        <h6 className="getblood">GET BLOOD</h6>
       </div>
       <div className="row">
         <div className="col">

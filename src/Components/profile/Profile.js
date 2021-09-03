@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import './Profile.css';
 
 function Profile() {
+  
+
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
         <a className="navbar-brand" href="..">
-          <img src="../../../img/blood 1.png" alt="" />
+          <img src="../../../img/blood 1.svg" alt="" />
           <h6 className="getblood">GET BLOOD</h6>
         </a>
         <button
@@ -74,6 +78,10 @@ function Profile() {
         <div className="row">
           <div className="col-md-3"><strong>Phone Number:</strong></div>
           <div className="col">+234 7041659382</div>
+        </div>
+        <div className="profileeditsave">
+          <img src="../../../img/Group 730.svg" alt=""/>
+          <img src="../../../img/Group 731.svg" alt=""/>
         </div>
       </div>
 
