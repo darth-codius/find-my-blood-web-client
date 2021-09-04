@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import './Errorpage.css'
 export default function Errorpage() {
+  const goHome = e =>{window.location.href = '/'}
   return (
-    <div>
+    <div className="col-container">
 
       <div className="logo3">
         <img src="../../../img/error.svg" alt="" />
@@ -10,7 +11,7 @@ export default function Errorpage() {
       <h1>Oops! this page is unknown or does not exist </h1>
       <p>Sorry about that, but the page you are looking for is'nt available.</p>
       {/* <Link to='/'></Link> */}
-      <button className="btn4">Go Back Home</button>
+      <button className="error-btn" onClick={goHome}>Go Back Home</button>
     </div>
   )
 }

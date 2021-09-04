@@ -4,6 +4,15 @@
   }
 }
 
+.col-container{
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
 .getblood {
   font-family: "Poppins", sans-serif;
   font-weight: 700;

@@ -1,5 +1,4 @@
-
-.btn3{
+.error-btn{
     border: none;
     padding: 20px 40px;
     color: #fff;
@@ -7,7 +6,7 @@
     border-radius: 50px;
 }
 
-.btn3:hover{
+.error-btn:hover{
     background-color: #fff;
     color: #ed394a;
 }
