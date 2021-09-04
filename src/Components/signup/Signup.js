@@ -21,7 +21,7 @@ export default function Signup() {
           confirmPassword,
         }
       );
-      if(res.status === 200) window.location.href = '/login'
+      if (res.status === 200) window.location.href = '/login'
 
     } catch (error) {
       console.error(error);
@@ -31,7 +31,7 @@ export default function Signup() {
 
   return (
     <div className="row flex-fill">
-      
+
       <div className="row-container flex-fill">
         <div className="col-5">
           <div className="row-container">
@@ -117,6 +117,47 @@ export default function Signup() {
           </p>
         </div>
       </div>
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="col">
+          <div className="signinheader">
+            <img src="../../../img/blood 1.svg" alt="" />
+            <h6 className="getblood">GET BLOOD</h6>
+          </div>
+          <div>
+            <img src="../../../img/Group 745signup.svg" alt="" />
+            <p className="">
+              Nearly 7% of the body weight of a human is made up of blood.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          
+        </div>
+
+      </div>
+
+
+
     </div>
+
+
+
+
+    
+
+
+
+    
+
+
+
+
   );
 }
