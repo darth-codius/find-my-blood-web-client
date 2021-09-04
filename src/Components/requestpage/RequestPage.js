@@ -6,7 +6,7 @@ import "./RequestPage.css";
 
 function RequestPage() {
   const [bloodGroup, setBloodGroup] = useState("");
-  const [units, setUnits] = useState("");
+  const [units, setUnits] = useState(0);
   const [banks, setBanks] = useState([]);
 
   const token = JSON.parse(localStorage.getItem("token"));
@@ -39,11 +39,11 @@ function RequestPage() {
   const handleRequest = async (bank) => {
     try {
       let res = await axios.post(
-        `https://find-my-blood.herokuapp.com/hospital/request/create/${bank._id}`,
+        `https://find-my-blood.herokuapp.com/hospital/request/create/${bank.hospital._id}`,
         { bloodGroup, units },
         { headers: headers }
       );
-      if (res.status === 200) window.location.href = '/success'
+      if (res.status === 201) window.location.href = '/success'
     } catch (err) {
       console.error(err);
     }
@@ -112,7 +112,7 @@ function RequestPage() {
                 className="form-control"
                 placeholder="units"
                 value={units}
-                onChange={(e) => setUnits(e.target.value)}
+                onChange={(e) => setUnits(Number(e.target.value))}
               ></input>
             </div>
           </div>
