@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Signup.css";
-import axios from "axios";
+import './Signup.css'
+import axios from "axios"
+
 
 export default function Signup() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
 
   const handleSignup = async () => {
     try {
@@ -87,7 +88,7 @@ export default function Signup() {
                 className="form-control registeri"
                 id="inputPassword"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e)=> setPassword(e.target.value)}
                 required
               />
             </div>
@@ -100,8 +101,8 @@ export default function Signup() {
                 className="form-control registeri"
                 id="inputPassword"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
+              onChange={(e)=> setConfirmPassword(e.target.value)}
+              required
               />
             </div>
           </form>
@@ -111,8 +112,8 @@ export default function Signup() {
           </button>
           <p className="pdonor1">
             Already have an account?
-            <Link to="/login" className="signin1">
-              Login
+            <Link to="/Login" className="signin1">
+            Login
             </Link>
           </p>
         </div>
@@ -161,3 +162,4 @@ export default function Signup() {
 
   );
 }
+

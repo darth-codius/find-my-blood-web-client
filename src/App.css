@@ -1,11 +1,17 @@
-
 @media only screen and (max-width: 600px) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-
+.col-container{
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
 
 .getblood {
   font-family: "Poppins", sans-serif;
@@ -62,6 +68,7 @@
   background-color: rgb(184, 179, 163);
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -81,8 +88,6 @@
 }
 
 
-
-
 .reqbuttondiv {
   margin-top: 30px;
 margin-bottom: 32px;
@@ -98,20 +103,14 @@ text-align: center;
   
 }
 
+.row-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.pdonor {
+  margin-left: 270px;
+}
 .p2 {
   margin-left: 213px;
 }
@@ -124,6 +123,21 @@ text-align: center;
   margin-top: -0px;
 }
 
+.pimg {
+  text-align: center;
+  margin-top: -120px;
+  /* margin-left: 190px;
+  margin-top: -50px;
+  font-size: smaller; */
+}
+.getblood {
+  margin-left: 100px;
+  min-width: -100px;
+  margin-bottom: 20px;
+}
+.col {
+  margin-bottom: 0px;
+}
 .signup {
   color: rgb(0, 195, 255);
   margin-left: 20px;
@@ -135,9 +149,6 @@ text-align: center;
   margin-left: 100px;
   min-width: -150px;
 }
-
-
-
 
 .btn-outline-success {
   background-color: red;
@@ -151,8 +162,6 @@ text-align: center;
   margin-right: 70px;
   margin-bottom: 20px;
 }
-
-
 
 .img-container{
   display: flex;
