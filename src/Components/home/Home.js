@@ -34,12 +34,12 @@ export default function Home() {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
+            <li className="nav-item active">
               <button type="button" className="navbutton" onClick={goToLogin}>
                 Login
               </button>
             </li>
-            <li className="nav-item">
+            <li className="nav-item active">
               <button type="button" className="navbutton1" onClick={goToSignup}>
                 Register
               </button>
@@ -102,7 +102,7 @@ export default function Home() {
             <ul className="list">
               <li>Get started by signing up.</li>
               <li>Find blood banks around your location.</li>
-              <li>Make a requst for blood to save lives. </li>
+              <li>Make a request for blood to save lives. </li>
             </ul>
             <button className="button4">Make a Request</button>
           </div>

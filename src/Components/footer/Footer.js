@@ -5,19 +5,18 @@ function Footer() {
   return (
     <div>
       <div className="footer">
-        <footer className="row row-cols-5 py-5 my-5 border-top">
-          <div className="col">
+        <footer className="row  py-5 my-5 border-top">
+          <div className="col-md-3">
+            <img src="../../../img/Group.svg" alt=""/>
             <h5>GET BLOOD</h5>
             <p>
               Get blood provides progressive ways to locate blood easily,
               accessible on mobile and online for everyone
             </p>
-            <p className="text-white">©Find mY blood.All rights reserved</p>
+            <p className="text-white">©Find My Blood.All rights reserved</p>
           </div>
 
-          <div className="col"></div>
-
-          <div className="col">
+          <div className="col-md-3">
             <h5>Navigation</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -38,8 +37,8 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="col">
-            <h5>Foolow Us</h5>
+          <div className="col-md-3">
+            <h5>Follow Us</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="" className="nav-link p-0 text-white">
@@ -59,7 +58,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="col">
+          <div className="col-md-3">
             <h5>Terms & Policies</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
@@ -81,3 +80,4 @@ function Footer() {
 }
 
 export default Footer
+
