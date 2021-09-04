@@ -1,6 +1,6 @@
-.container-fluid {
+/* .container-fluid {
   background-color: white;
-}
+} */
 
 .signin-row {
   align-items: center;
@@ -19,19 +19,26 @@
 .p2 {
   margin-left: 213px;
 }
-.button1 {
-  background-color: red !important;
-}
+
 
 .button1 {
   margin-bottom: 30px;
   margin-top: 40px;
   width: 200px;
-  height: 64px;
+  height: 50px;
   border-radius: 32px;
   padding: 10px;
-  text-decoration-color: white;
+  border: 1px solid #ed394a;
+  color: #ed394a;
+  background-color: white;
 }
+
+.button1:hover {
+  border: 1px solid #ed394a;
+  background-color: #ed394a;
+  color: white;
+}
+
 .signup {
   color: rgb(0, 195, 255);
   margin-left: 20px;
@@ -44,4 +51,11 @@
 
 .container-fluid {
   margin-bottom: 100px;
+  padding: 5px 100px;
+}
+
+.pimg {
+  text-align: center;
+  margin-top: -60px;
+  
 }
