@@ -1,7 +1,36 @@
-import React from "react";
-import "./SentRequest.css"
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import RequestRow from "../request_row/RequestRow";
+import "./SentRequest.css";
 
 function SentRequests() {
+  const [requests, setRequests] = useState([]);
+
+  const token = JSON.parse(localStorage.getItem("token"));
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `${token}`,
+  };
+
+  useEffect(() => {
+    async function getData() {
+      try {
+        const response = await axios.post(
+          "https://find-my-blood.herokuapp.com/hospital/request/all",
+          { hospital: user.name },
+          { headers }
+        );
+        console.log(response.data.data);
+        setRequests([...response.data.data.sentRequest]);
+      } catch (error) {}
+    }
+
+    getData();
+  }, []);
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light navblood">
@@ -33,7 +62,10 @@ function SentRequests() {
       </nav>
 
       <div className="sentrequestdiv">
-        <div className="card mb-3 sentrequestcard" style={{ maxWidth: "540px" }}>
+        <div
+          className="card mb-3 sentrequestcard"
+          style={{ maxWidth: "540px" }}
+        >
           <div className="row g-0">
             <div className="col-md-4">
               <img
@@ -59,7 +91,6 @@ function SentRequests() {
           <table className="table table-sm">
             <thead>
               <tr className="bg-danger text-center">
-                <th scope="col"></th>
                 <th scope="col">Blood Bank</th>
                 <th scope="col">Blood group</th>
                 <th scope="col">Units Requested</th>
@@ -67,33 +98,9 @@ function SentRequests() {
               </tr>
             </thead>
             <tbody>
-              <tr className="table-danger requestrow">
-                <th scope="row"></th>
-                <td>Federal Medical Centre(FMC)Asaba</td>
-                <td>O+</td>
-                <td>15 Units</td>
-                <td>
-                  <img src="../../../img/Group 716.svg" alt=".." />
-                </td>
-              </tr>
-              <tr className="table-danger requestrow">
-                <th scope="row"></th>
-                <td>Federal Medical Centre(FMC)Asaba</td>
-                <td>O+</td>
-                <td>15 Units</td>
-                <td>
-                  <img src="../../../img/Group 717.svg" alt=".." />
-                </td>
-              </tr>
-              <tr className="table-danger requestrow">
-                <th scope="row"></th>
-                <td>Federal Medical Centre(FMC)Asaba</td>
-                <td>O+</td>
-                <td>15 Units</td>
-                <td>
-                  <img src="../../../img/Group 716.svg" alt=".." />
-                </td>
-              </tr>
+              {requests.map((request, index) => {
+                return <RequestRow request={request} key={index} />;
+              })}
             </tbody>
           </table>
         </div>

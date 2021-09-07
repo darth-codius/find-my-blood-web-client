@@ -40,7 +40,7 @@ function RequestPage() {
     try {
       let res = await axios.post(
         `https://find-my-blood.herokuapp.com/hospital/request/create/${bank.hospital._id}`,
-        { bloodGroup, units },
+        { id: bank._id,bloodGroup, units },
         { headers: headers }
       );
       if (res.status === 201) window.location.href = '/success'

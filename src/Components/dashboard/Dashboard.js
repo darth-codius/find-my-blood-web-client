@@ -25,11 +25,11 @@ export default function Request() {
       try {
         const response = await axios.post("https://find-my-blood.herokuapp.com/hospital/request/all",
           { hospital: user.name }, { headers })
-        console.log(response);
+        console.log(response.data.data);
         setRequest({
           status: response.data.status,
-          sentRequest: [...response.data.sentRequest],
-          recievedRequest: [...response.data.recievedRequest]
+          sentRequest: [...response.data.data.sentRequest],
+          recievedRequest: [...response.data.data.recievedRequest]
         })
 
       } catch (error) {

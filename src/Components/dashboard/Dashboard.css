@@ -1,46 +1,43 @@
 .container4 {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-  
-  .make {
-    color: white;
-    background-color: #ed394a;
-    margin-top: 50px;
-    border-radius: 32px;
-    
-    width: 260px;
-    height: 50px;
-    left: 121px;
-    top: 520px;
-    border: none;
-  }
-  .save {
-    font-family: "Poppins", sans-serif;
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 108px;
-    
-    
-    
-    margin-top: 60px;
-    
-  }
-  
-  .life {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    margin-top: 30px;
-    font-size: 20px;
-  }
-  .table {
-    margin-bottom: 120px;
-  }
-  .requestpageP {
-    text-align: right;
-  }
+  padding-left: 120px;
+  padding-right: 120px;
+}
 
-  .imgdashb {
-    margin-left: -320px;
-    z-index: -1;
-  }
+.make {
+  color: white;
+  background-color: #ed394a;
+  margin-top: 50px;
+  border-radius: 32px;
+
+  width: 260px;
+  height: 50px;
+  left: 121px;
+  top: 520px;
+  border: none;
+}
+.save {
+  font-family: "Poppins", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 108px;
+
+  margin-top: 60px;
+}
+
+.life {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.table {
+  margin-bottom: 120px;
+}
+.requestpageP {
+  text-align: right;
+}
+
+.imgdashb {
+  margin-left: -320px;
+  z-index: -1;
+}
