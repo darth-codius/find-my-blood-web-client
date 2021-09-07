@@ -69,6 +69,7 @@ export default function Signin() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               ></input>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
             <div className="col-md-6">
@@ -100,6 +101,7 @@ export default function Signin() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }

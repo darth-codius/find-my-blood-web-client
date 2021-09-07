@@ -55,15 +55,7 @@
   font-size: 32px;
 }
 
-.btn4 {
-  background: #ed394a;
-  border-radius: 32px;
-  width: 250px;
-  height: 50px;
-  left: 582px;
-  background-position: center;
-  color: white;
-}
+
 .header {
   background-color: rgb(184, 179, 163);
 }
@@ -108,9 +100,7 @@ text-align: center;
   margin: 0 auto;
 }
 
-.pdonor {
-  margin-left: 270px;
-}
+
 .p2 {
   margin-left: 213px;
 }
@@ -123,13 +113,7 @@ text-align: center;
   margin-top: -0px;
 }
 
-.pimg {
-  text-align: center;
-  margin-top: -120px;
-  /* margin-left: 190px;
-  margin-top: -50px;
-  font-size: smaller; */
-}
+
 .getblood {
   margin-left: 100px;
   min-width: -100px;
