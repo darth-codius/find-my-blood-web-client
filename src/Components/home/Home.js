@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 import './Home.css'
 
 
@@ -58,9 +59,11 @@ export default function Home() {
               <p className="card-text cardtext">
                 We are linked by blood, and blood is memory without language
               </p>
-              <button type="button" className="button3">
+              
+              <button type="button" className="button3" onClick={goToSignup}>
                 Get Started
               </button>
+              
             </div>
           </div>
           <div className="col-md-5 img-container">
